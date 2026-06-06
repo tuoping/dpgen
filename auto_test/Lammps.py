@@ -513,6 +513,7 @@ class Lammps(Task):
 
             contcar = os.path.join(output_dir, "CONTCAR")
             dumpfn(result_dict, contcar, indent=4)
+            print(output_dir)
             d_dump = loadfn(contcar)
             d_dump.to("vasp/poscar", contcar, frame_idx=-1)
 

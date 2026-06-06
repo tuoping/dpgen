@@ -270,6 +270,7 @@ class Elastic(Property):
             #with open(os.path.join(ii, 'result_task.json')) as fin:
             #   task_result = json.load(fin)
             #stress = np.array(task_result['data']['stress'])[-1]
+            print(">>> task.", ii)
             stress = loadfn(os.path.join(ii, "result_task.json"))["stress"][-1]
             lst_strain.append(strain)
             lst_stress.append(Stress(stress * -1000))
